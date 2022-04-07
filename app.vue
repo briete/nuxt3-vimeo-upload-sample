@@ -65,7 +65,7 @@ async function videoUpload(event: Event) {
 
 <template>
   <div class="container mx-auto w-3/5">
-    <!-- <label v-if="uploading === 'none'"
+    <label v-if="uploading === 'none'"
         class="flex justify-center w-full h-32 px-4 mt-12 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
         <span class="flex items-center space-x-2">
             <span class="font-medium text-gray-600">
@@ -91,10 +91,10 @@ async function videoUpload(event: Event) {
       <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-pink-200">
       <div :style="{ width: percentage }" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
       </div>
-    </div> -->
+    </div>
 
     <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/696814540?h=228ab696d4" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="テスト動画" />
+      <iframe :src="embedUrl" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="テスト動画" />
     </div>
   </div>
 </template>
